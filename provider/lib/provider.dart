@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class Why_Provider_Screen extends StatefulWidget {
@@ -7,9 +9,20 @@ class Why_Provider_Screen extends StatefulWidget {
   State<Why_Provider_Screen> createState() => _Home_ViewState();
 }
 
-int counter = 0;
-
 class _Home_ViewState extends State<Why_Provider_Screen> {
+  int counter = 0;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      counter++;
+      print(counter);
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     print(build);
@@ -29,7 +42,7 @@ class _Home_ViewState extends State<Why_Provider_Screen> {
         children: [
           Center(
             child: Text(
-              counter.toString(),
+              DateTime.now().toString().substring(11, 19),
               style: TextStyle(fontSize: 30),
             ),
           ),
