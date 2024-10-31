@@ -43,6 +43,7 @@ class _Home_ViewState extends State<Home_View> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           counter++;
+          setState(() {});
           print(counter);
         },
         child: Icon(Icons.add),
