@@ -28,6 +28,15 @@ class _Home_ViewState extends State<Home_View> {
   Widget build(BuildContext context) {
     print(build);
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue[50],
+        title: Center(
+          child: Text(
+            "Welcome to Provider",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
