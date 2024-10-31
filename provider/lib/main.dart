@@ -30,7 +30,7 @@ class _Home_ViewState extends State<Home_View> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[50],
-        title: Center(
+        title: const Center(
           child: Text(
             "Welcome to Provider",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
